@@ -1,0 +1,8 @@
+Item Name,Current Quantity,Reorder Threshold,Target Stock,Priority Level,Suggested Reorder Qty
+Heavy Duty Pallet Straps,12,50,150,Critical,138
+Industrial Steel Shelving,4,20,50,Critical,46
+Barcode Scanner Model X,0,15,40,Critical,40
+Forklift Battery Pack,1,5,10,Critical,9
+Safety Hard Hats,8,30,80,Low,72
+Shipping Label Printer,3,10,25,Low,22
+Cardboard Boxes (Large),15,100,300,Critical,285
