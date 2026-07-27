@@ -1,12 +1,11 @@
 # python-inventory-reorder-alert
 
-# 📦 Warehouse Stock Scanner & Restock Automation System
 
 An automated supply chain intelligence and stock scanning system built with **Python (Django)** and **React**. Designed to mirror the quiet morning backend automation job that warehouse operations rely on to ensure inventory never quietly runs dry.
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 - [Overview](#-overview)
 - [Key Features](#-key-features)
 - [Bonus Objectives Implemented](#-bonus-objectives-implemented)
@@ -24,7 +23,7 @@ An automated supply chain intelligence and stock scanning system built with **Py
 
 ---
 
-## 🎯 Overview
+## Overview
 
 This system scans warehouse stock CSV data, compares item quantities against reorder thresholds using conditional logic, flags items needing replenishment, and generates action-oriented restock reports.
 
@@ -32,30 +31,30 @@ Whether operated via the **standalone command-line script** (`stock_scanner.py`)
 
 ---
 
-## ⚡ Key Features
+## Key Features
 
 1. **Robust CSV File Parsing**: Parses stock data into clean dictionary structures (`item_name`, `current_quantity`, `reorder_threshold`, `target_stock`). Automatically maps dynamic column headers (e.g. `Item Name`, `Product`, `Qty`, `Threshold`, `Min Stock`).
 2. **Conditional Stock Logic**: Automatically compares `current_quantity` vs `reorder_threshold` to isolate items running low.
 3. **Priority Level Classification**:
-   - 🚨 **Critical**: Items with `0` stock or stock `≤ 25%` of threshold.
-   - ⚠️ **Low**: Items below threshold but above 25%.
-   - ✅ **Sufficient**: Items meeting or exceeding reorder threshold.
+   - **Critical**: Items with `0` stock or stock `≤ 25%` of threshold.
+   - **Low**: Items below threshold but above 25%.
+   - **Sufficient**: Items meeting or exceeding reorder threshold.
 4. **Reorder Quantity Calculation**: Calculates exact replenishment units required (`target_stock - current_quantity`).
 5. **Interactive Operations Dashboard**: Built with React (Vite) featuring drag-and-drop CSV upload, live item search, priority filter pills, and real-time status badges.
 
 ---
 
-## 🎁 Bonus Objectives Implemented
+## Bonus Objectives Implemented
 
-- ✅ **Simulated Email Alert**: Automatically formats scan results into an email subject & body (`🚨 [WAREHOUSE ALERT] 7 Item(s) Require Restocking...`) complete with a "Copy to Clipboard" feature in the UI.
-- ✅ **Priority Levels (Critical vs Low)**: Replaced single flat flags with dynamic multi-tier priority badges.
-- ✅ **Reorder Quantity Suggestion**: Computes target restock quantities per item rather than just flagging low status.
-- ✅ **Export as CSV Report**: Generates and downloads `restock_report.csv` directly from CLI or UI.
-- ✅ **Reflection Note**: Embedded architectural analysis detailing production improvements for scheduling, supplier APIs, dynamic thresholds, and multi-warehouse tracking.
+- **Simulated Email Alert**: Automatically formats scan results into an email subject & body (`[WAREHOUSE ALERT] 7 Item(s) Require Restocking...`) complete with a "Copy to Clipboard" feature in the UI.
+- **Priority Levels (Critical vs Low)**: Replaced single flat flags with dynamic multi-tier priority badges.
+- **Reorder Quantity Suggestion**: Computes target restock quantities per item rather than just flagging low status.
+- **Export as CSV Report**: Generates and downloads `restock_report.csv` directly from CLI or UI.
+- **Reflection Note**: Embedded architectural analysis detailing production improvements for scheduling, supplier APIs, dynamic thresholds, and multi-warehouse tracking.
 
 ---
 
-## 📁 Directory Structure
+## Directory Structure
 
 ```text
 Inventory_Record_System/
@@ -83,7 +82,7 @@ Inventory_Record_System/
 
 ---
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 - **Python**: 3.10+ (Python 3.12 recommended)
 - **Node.js**: v18+ & **npm**: v9+
@@ -91,7 +90,7 @@ Inventory_Record_System/
 
 ---
 
-## 📦 Installation & Setup
+## Installation & Setup
 
 ### 1. Backend Setup (Django & Python CLI)
 
@@ -136,7 +135,7 @@ Inventory_Record_System/
 
 ---
 
-## 🚀 Usage Guide
+## Usage Guide
 
 ### Running the Standalone Python CLI Scanner
 
@@ -211,7 +210,7 @@ PRIORITY   | ITEM NAME                      | CURRENT  | THRESH   | REORDER QTY
 
 ---
 
-## 🧩 Edge-Case Handling & Resilience
+## Edge-Case Handling & Resilience
 
 The stock scanning engine includes safeguards against invalid or messy real-world warehouse data:
 
@@ -222,7 +221,7 @@ The stock scanning engine includes safeguards against invalid or messy real-worl
 
 ---
 
-## 💡 Reflection & Architectural Insights
+## Reflection & Architectural Insights
 
 > **"What would you improve with more time?"**
 
@@ -237,5 +236,5 @@ The stock scanning engine includes safeguards against invalid or messy real-worl
 
 ---
 
-## 📄 License
+## License
 This project is open-source and available under the [MIT License](LICENSE).
