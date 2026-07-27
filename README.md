@@ -1,4 +1,4 @@
-# python-inventory-reorder-alert
+## Python-Inventory-Reorder-Alert
 
 
 An automated supply chain intelligence and stock scanning system built with **Python (Django)** and **React**. Designed to mirror the quiet morning backend automation job that warehouse operations rely on to ensure inventory never quietly runs dry.
